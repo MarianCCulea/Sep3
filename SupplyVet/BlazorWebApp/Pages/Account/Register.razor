@@ -1,0 +1,70 @@
+@page "/register"
+@using BlazorWebApp.Model.Domain
+@using System.Text.Json
+@inject IJSRuntime JsRuntime
+@inject IUserData userData
+
+
+
+<EditForm Model="@user" OnValidSubmit="@SubmitRegister">
+    <DataAnnotationsValidator />
+    <p>
+        <div class="form-group">
+            <ValidationMessage For="@(()=>user.username)" />
+            <label for="username">Username: </label>
+            <InputText id="username" @bind-Value="user.username" />
+        </div>
+    </p>
+    <p>
+        <div class="form-group">
+            <ValidationMessage For="@(()=>user.fullname)" />
+            <label for="fullname">Full Name: </label>
+            <InputText id="fullname" @bind-Value="user.fullname" />
+        </div>
+    </p>
+    <p>
+        <div class="form-group">
+            <ValidationMessage For="@(()=>user.email)" />
+            <label for="email">Email: </label>
+            <InputText id="email" @bind-Value="user.email" />
+        </div>
+    </p>
+    <p>
+        <div class="form-group">
+            <ValidationMessage For="@(()=>user.password)" />
+            <label for="pass">Password: </label>
+            <InputText type="password" id="pass" @bind-Value="user.password" />
+        </div>
+    </p>
+    <p>
+        <div class="form-group">
+            <ValidationMessage For="@(()=>user.vetid)" />
+            <label for="vet">Vet Id: </label>
+            <InputNumber id="vet" @bind-Value="user.vetid" />
+        </div>
+    </p>
+
+    <button type="submit">Register</button>
+</EditForm>
+
+
+
+<div>
+    <span style="color:blue" id="resultJson">
+    </span>
+</div>
+
+@code{
+    private User user = new User();
+
+    private async Task SubmitRegister()
+    {
+        var response = await userData.RegisterAsync(user);
+
+        await JsRuntime.InvokeVoidAsync("setElementTextById", "resultJson", response);
+
+    }
+
+
+
+}

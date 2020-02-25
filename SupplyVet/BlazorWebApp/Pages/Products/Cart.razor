@@ -1,0 +1,74 @@
+﻿@page "/cart"
+@using BlazorWebApp.Model.Domain
+@inject IUserData userdata
+@inject IJSRuntime jsRuntime
+@inject NavigationManager NavigationManager
+@attribute [Authorize(Policy = "MustBeUser")]
+<h3>Cart</h3>
+
+<AuthorizeView>
+    <Authorized>
+        <table class="table" border="1">
+            <tr>
+                <td colspan="2" width="600"> Products </td>
+                <td width="100"> Quantity </td>
+                <td width="100"> Price </td>
+            </tr>
+            @for (int i = 0; i < items.Count; i++)
+            {
+                <tr>
+                    <td height="100" width="100"> <a href=@($"/products/{items[i].id}") asp-route-id="@items[i].id">
+                        <img src="@items[i].url" height="70" /></a> </td>
+                    <td height="100" width="500"> @items[i].name </td>
+                    <td> @count[i] </td>
+                    <td> @items[i].price;- </td>
+                </tr>
+            }
+            <tr>
+                <td colspan="3"> Total Price </td>
+                <td> @totalprice;- </td>
+            </tr>
+        </table>
+        <h4 id="resultJson">
+        </h4>
+        <button type="button" class="btn btn-primary" @onclick="() =>CreateOrder(context.User.Identity.Name)">Continue to check out</button>
+    </Authorized>
+</AuthorizeView>
+
+
+
+
+@code {
+
+    float totalprice { get; set; }
+    private IList<Item> items { get; set; }
+    
+    int[] count = new int[50];
+
+    protected override void OnInitialized()
+    {
+        count = userdata.GetCount();
+        items = userdata.CartItems();
+        for (int i = 0; i < items.Count; i++)
+        {
+
+            totalprice += items[i].price * count[i];
+
+        }
+    }
+
+    async Task CreateOrder(string id)
+    {
+
+
+        if (items.Count == 0)
+            await jsRuntime.InvokeVoidAsync("setElementTextById", "resultJson", "Please add items in to the cart first.");
+        else
+        {
+            int userid = Int32.Parse(id);
+            NavigationManager.NavigateTo($"/completeorder/{userid}");
+        }
+    }
+
+
+}

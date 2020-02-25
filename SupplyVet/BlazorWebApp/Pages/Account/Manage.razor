@@ -1,0 +1,66 @@
+@page "/manage"
+@using BlazorWebApp.Model.Domain
+@inject IJSRuntime jsRuntime
+@inject NavigationManager manager
+@inject IUserData userData
+@attribute [Authorize(Policy = "MustBeUser")]
+
+<AuthorizeView>
+    <Authorized>
+        <h3>My Profile</h3>
+        <br />
+        <div class="form-group">
+            <span>Username: @user.username</span>
+        </div>
+        <div class="form-group">
+            <span>Fullname: @user.fullname</span>
+        </div>
+        <div class="form-group">
+            <span>Email: @user.email</span>
+        </div>
+        <div class="form-group">
+            <span>Vet ID: @user.vetid</span>
+        </div>
+        <hr />
+        <a href="vieworders" alt="vieworders">
+            View Orders
+        </a><br />
+        <a href="edituser" alt="Edit">
+            Edit profile
+        </a><br />
+        <button class="btn-danger" @onclick="() => ConfirmDelete(context.User.Identity.Name)">Delete account </button>
+    </Authorized>
+</AuthorizeView>
+
+<span id="resultJson">
+</span>
+@code{
+    User user { get; set; }
+
+    protected override void OnInitialized()
+    {
+
+        user = userData.GetUser();
+    }
+
+    protected async Task ConfirmDelete(string userid)
+    {
+        
+        bool confirmed = await jsRuntime.InvokeAsync<bool>("confirm", "Are you sure you want to delete account ?");
+        if (confirmed)
+        {int id = Int32.Parse(userid);
+            await userData.DeleteUser(id);
+            var interop = new Interop(jsRuntime);
+            string antiforgerytoken = await interop.GetElementByName("__RequestVerificationToken");
+            var fields = new { __RequestVerificationToken = antiforgerytoken };
+            await interop.SubmitForm("/logoutRequester/", fields);
+        }
+        else
+        {
+
+        }
+    }
+
+
+
+}

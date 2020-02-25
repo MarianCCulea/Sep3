@@ -1,0 +1,20 @@
+﻿@page "/ordercomplete/{Id:int}"
+@inject NavigationManager manager
+@inject IUserData userdata
+@attribute [Authorize(Policy = "MustBeUser")]
+
+<h3>Order sent successfully</h3>
+<hr />
+<Button class="page-link" @onclick="Redirect">Click here to see your orders.</Button>
+
+@code {
+
+    [Parameter]
+    public int Id { get; set; }
+    async Task Redirect()
+    {
+        await userdata.GetUserAsync(Id);
+        manager.NavigateTo("/manage");
+
+    }
+}

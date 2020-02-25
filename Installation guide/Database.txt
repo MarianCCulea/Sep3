@@ -1,0 +1,166 @@
+Step 1. Create a schema and set it.
+
+CREATE SCHEMA sepdb;
+SET SCHEMA 'sepdb';
+
+Step 2. Create the tables in this order.
+
+
+
+CREATE TABLE orders
+ (
+  id Serial PRIMARY KEY,
+  Adress VARCHAR(50) NOT NULL,
+  InvoiceAdress VARCHAR(100) NOT NULL,
+  TotalPrice Float NOT NULL,
+  Totalitems Float NOT NULL,
+  phone int NOT NULL,
+  delivered boolean default false
+  );
+  
+
+CREATE TABLE users(
+  id Serial PRIMARY KEY,
+  userName VARCHAR(50) NOT NULL UNIQUE,
+  fullName VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  password VARCHAR(50) NOT NULL,
+  role VARCHAR DEFAULT 'User' CHECK(role In ('User','Provider')),
+  vetid int
+  );
+  
+
+CREATE TABLE item(
+  id Serial PRIMARY KEY,
+  name VARCHAR(50) NOT NULL ,
+  category VARCHAR(50) NOT NULL,
+  price Float NOT NULL CHECK(price > 0),
+  description Text NOT NULL,
+  url VARCHAR(250) NOT NULL ,
+  quantity int NOT NULL ,
+  quantitytype varchar NOT NULL CHECK(quantitytype IN ('ml', 'mg','mg/ml')),
+  nrofitems int default 0
+  );
+
+
+CREATE TABLE OrderhasItems(
+  order_id   int,
+  item_id  int,
+  item_count int,
+ PRIMARY KEY (order_id, item_id)
+, FOREIGN KEY (item_id) REFERENCES item(id) 
+, FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE
+);
+
+ CREATE TABLE Userhasorder(
+  user_id   int,
+  order_id  INT,
+  PRIMARY KEY (user_id, order_id),
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE
+);
+
+
+
+Step 3. Insert the items in the item table.
+								  
+INSERT INTO item (name, category, price,description,url,quantity,quantitytype,nrofitems)
+VALUES ('Advantage vet cat', 'pills',150, 'For the prevention and control of flea infestations on cats. Advantage works on adult fleas and flea larvae. Larval stages in the animals environment die after contact with a treated animal. Fleas on cats die within 1 day after treatment. One treatment prevents further flea infestation for 4 weeks.
+Active substances:
+Imidacloprid','https://cdn.discordapp.com/attachments/489042437021368320/652118407931756564/Advantage_vet_cat.jpg',100,'mg/ml',20);
+									  
+									  
+INSERT INTO item (name, category, price,description,url,quantity,quantitytype,nrofitems)
+VALUES ('Advocate dog', 'Drops',150, 'A treatment for fleas and their larvae, roundworm, hookworm, heartworm and ear mites. It also treats lungworm, whipworm, biting lice, sarcoptes and demodex. Advocate for dogs comes in different strengths and pack sizes, depending on the size of the animal being treated. The medicine can only be obtained with a prescription. Advocate is applied from pre-filled pipettes. These are small plastic droppers, available in different sizes depending on the size of the animal, which are filled with the correct amount of Advocate for one treatment.','https://cdn.discordapp.com/attachments/489042437021368320/652118410653859840/Advocate_dog.jpg',100,'mg/ml',20);
+									  
+INSERT INTO item (name, category, price,description,url,quantity,quantitytype,nrofitems)
+VALUES ('Boycoxine vet', 'Antibiotics',250,'Toltrazuril is a triazinone derivative. It works against coccidia of the genus Isospora and Eimeria . Toltrazuril acts at all intracellular stages of development of coccidia in merogony (unexplored reproduction phase) and gamogoni (sex reproduction phase). All stages are killed and thus the mode of action is coccidiocidal.
+Active substances: 
+Toltrazuril 50 mg / ml. Sodium benzoate and sodium propionate.','https://cdn.discordapp.com/attachments/489042437021368320/652118411308040202/Baycoxine.jpg',50,'mg/ml',10);
+		
+									  
+INSERT INTO item (name, category, price,description,url,quantity,quantitytype,nrofitems)
+VALUES ('Advantage vet dog', 'Drops',150, 'For the prevention and control of flea infestations on dogs. Advantage works on adult fleas and flea larvae. Larval stages in the animals environment die after contact with a treated animal. Fleas on dogs die within 1 day after treatment. One treatment prevents further flea infestation for 4 weeks.
+Active substances:
+Imidacloprid
+','https://cdn.discordapp.com/attachments/489042437021368320/652118408963293187/Advantage_vet_dog.jpg',100,'mg/ml',20);
+									  
+INSERT INTO item (name, category, price,description,url,quantity,quantitytype,nrofitems)
+VALUES ('Baytril', 'Pills',200,
+'Enrofloxacin is a synthetic chemo-therapeutic agent from the class of the quinolone carboxylic acid derivatives. It has antibacterial activity against a broad spectrum of Gram negative and Gram positive bacteria. (See Table 1). It is rapidly absorbed from the digestive tract, penetrating into all measured body tissues and fluids. (See Table 2). Tablets are available in three sizes (15.0, 50.0 and 150.0 mg enrofloxacin). Each mL of injectable solution contains: enrofloxacin 50 mg, n-butyl alcohol 30 mg, potassium hydroxide for pH adjustment and water for injection, q.s.
+Active substances: Enrofloxacin',
+'https://cdn.discordapp.com/attachments/489042437021368320/652118413002407956/Baytril_vet_50-150mg.jpg',50,'mg',25);
+									  
+INSERT INTO item (name, category, price,description,url,quantity,quantitytype,nrofitems)
+VALUES ('Baytril', 'Injectable',230,
+'Baytril 5% Solution for Injection is a clear sterile light yellow solution for injection containing as active ingredient enrofloxacin 50 mg/ml with 30 mg/ml n-butyl alcohol as a preservative.
+Dogs and Cats: treats bacterial infections of the alimentary, respiratory and urogenital tracts, skin, secondary wound infections and otitis externa where clinical experience, supported where possible by sensitivity testing of the causal organism, indicates enrofloxacin as the drug of choice.
+Active substances: Enrofloxacin',
+'https://cdn.discordapp.com/attachments/489042437021368320/652118619047854081/Baytril_Vet_injection_5.jpg',50,'mg/ml',35);
+									  
+INSERT INTO item (name, category, price,description,url,quantity,quantitytype,nrofitems)
+VALUES ('Droncit', 'Pills',145,
+'DRONCIT® (Praziquantel) Cestocide tablets are indicated for the removal of the following canine and feline cestodes: Canine: Dipylidium caninum, Taenia pisiformis, Taenia hydatigena, Echinococcus granulosus, Mesocestoides corti and for the removal and control of Echinococcus multilocularis. Feline: Taenia taeniaeformis and Dipylidium caninum.
+Content: *2-(cyclohexylcarbonyl)-1,2,3,6,7,11 b-hexahydro-4H-pyrazino[2, 1-a]isoquinolin-4-one.',
+'https://cdn.discordapp.com/attachments/489042437021368320/652118639973236756/Droncit_vet.png',50,'mg',10);
+									  
+									  
+INSERT INTO item (name, category, price,description,url,quantity,quantitytype,nrofitems)
+VALUES ('Drontaste', 'Pills',220,
+'TABLETS 150 mg / 144 mg / 50 mg and 525 mg / 504 mg / 175 mg for dogs : Each tablet contains: Febantel 150 mg, resp. 525 mg, pyrantel embonate 144 mg, resp. 504 mg, prazikvantel 50 mg, resp. 175 mg, lactose, excipients. Meat Taste.
+Mechanism of action: Pyrantel and febantel act synergistically against coilworm, hookworm and whipworm. Pyrantel provides spastic paralysis of roundworm via depolarizing neuromuscular blockade. Febantel inhibits the polymerization of tubulin to microtubulin, providing a structural and functional metabolic disorder that depletes the parasites energy reserves and kills it within 2-3 days. Prazikvantel is very rapidly absorbed through the parasites surface and damages the integument, causing interrupted metabolism and then death.',
+'https://cdn.discordapp.com/attachments/489042437021368320/652118400868548610/Drontaste.png',175,'mg',10);
+									  
+									  
+INSERT INTO item (name, category, price,description,url,quantity,quantitytype,nrofitems)
+VALUES ('Rompun vet', 'Pills',140,
+'Rompun® should be used in dogs and cats when it is desirable to produce a state of sedation accompanied by a shorter period of analgesia. Rompun® has been used successfully as follows:
+1. Diagnostic procedures - examination of the mouth and ears, abdominal palpation, rectal palpation, vaginal examination, catheterization of the bladder and radiographic examinations.
+2. Orthopedic procedures, such as application of casting materials and splints.
+3. Dental procedures.
+4. Minor surgical procedures of short duration such as debridement, removal of cutaneous neoplasms and suturing of lacerations.
+5. To calm and facilitate handling of fractious animals.
+Active substance: Xylazin 20 mg (som xylazinhydrochlorid) , Methylparahydroxybenzoat (E 218) 1,5 mg',
+'https://cdn.discordapp.com/attachments/489042437021368320/652118402558853121/Rompun.jpg',20,'mg/ml',20);
+									  
+INSERT INTO item (name, category, price,description,url,quantity,quantitytype,nrofitems)
+VALUES ('Seresto vet cat', 'Pills',120,
+'Seresto flea and tick collar provides 8 months of continuous flea and tick prevention for cats
+The Seresto cat collar works through contact, so fleas and ticks don’t have to bite your cat to die
+This 8 month cat flea and tick treatment is convenient, odorless and non greasy; no need for messy monthly treatments
+Vet recommended tick and flea collar for cats is easy to put on and contains optional reflectors for added visibility at night.',
+'https://cdn.discordapp.com/attachments/489042437021368320/652118403997368320/Seresto_degandcat.jpg',125,'mg',20);
+									  
+INSERT INTO item (name, category, price,description,url,quantity,quantitytype,nrofitems)
+VALUES ('Seresto vet dog', 'Pills',100,
+'Seresto flea and tick collar provides 8 months of continuous flea and tick prevention for dogs
+The Seresto cat collar works through contact, so fleas and ticks don’t have to bite your dog to die
+This 8 month cat flea and tick treatment is convenient, odorless and non greasy; no need for messy monthly treatments
+Vet recommended tick and flea collar for dogs is easy to put on and contains optional reflectors for added visibility at night',
+'https://cdn.discordapp.com/attachments/489042437021368320/652118406144720897/Seresto_dog.jpg',125,'mg',20);
+									  
+INSERT INTO item (name, category, price,description,url,quantity,quantitytype,nrofitems)
+VALUES ('Welpan vet', 'Syrup',190,
+'For the treatment of roundworm infections in puppies and young dogs up to 1 year of age caused by coyote (Toxocara canis, Toxascaris leonina), hookworm (Ancylostoma caninum, Uncinaria stenocephala), whipworm (Trichuris vulpis).
+Against flush mask. Oral solution, given as a single dose. Repeat for puppies every 14 days up to 3 months of age.
+Active substance: Febantel, combinations 5 mg / m',
+'https://cdn.discordapp.com/attachments/489042437021368320/652118407789150208/Welpan.png',50,'ml',20);
+
+Step 4. Create a function in the database.
+
+create function nrofitems()
+returns trigger as $$
+begin
+   update item set nrofitems=nrofitems-new.item_count where item.id=new.item_id;
+   return new;
+   end
+   $$ language plpgsql;	
+
+Step 5. Create a trigger in the database.
+
+CREATE TRIGGER nrofitems_trig
+AFTER INSERT ON sepdb.orderhasitems
+FOR EACH ROW
+Execute procedure nrofitems();
+				  
+									  

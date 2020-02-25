@@ -1,0 +1,51 @@
+﻿@page "/products"
+@using BlazorWebApp.Model.Domain
+@inject IUserData Userdata
+@attribute [Authorize(Policy = "MustBeUser")]
+
+
+<h2>View all products here</h2>
+
+
+<button class="btn btn-primary" @onclick="Update">Update List</button>
+
+@if (items == null || !items.Any())
+{
+    <p>Nothing to see here</p>
+}
+else
+{
+    <table class="table" style="width:200px">
+        <tbody>
+            @for (var z = 0; z < items.Count; z++)
+            {
+                @if (z % 3 == 0)
+                {
+                    <tr>
+                    </tr>
+                }
+            <td width="33%">
+                <a href=@($"/products/{items[z].id}") asp-route-id="@items[z].id"><img src="@items[z].url" height="300" /></a>
+            </td>
+            <td width="33%">@items[z].name</td>
+        }
+            </tbody>
+        </table>
+        }
+}
+
+@code {
+
+    private IList<Item> items
+    { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        IList<Item> unordered = await Userdata.RequestAllItemsAsync();
+        items =unordered.OrderBy(o=>o.id).ToList();
+    }
+
+    private async Task Update()
+    {
+        items = await Userdata.RequestAllItemsAsync();
+    }
+}

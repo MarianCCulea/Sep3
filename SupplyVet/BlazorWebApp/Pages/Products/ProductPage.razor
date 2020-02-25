@@ -1,0 +1,62 @@
+﻿@page "/products/{Id:int}"
+@using BlazorWebApp.Model.Domain
+@using BlazorWebApp.Shared
+@using Microsoft.AspNetCore.Components;
+@inject IUserData userdata
+@inject IJSRuntime jsRuntime
+@inject NavigationManager NavigationManager
+@attribute [Authorize(Policy = "MustBeUser")]
+
+<h1>Product Page</h1>
+<table class="table" border="0" width="700" height="500" cellspacing="0">
+    <tr>
+        <th width="300" rowspan="3"> <img src="@item.url" width="300" /> </th>
+        <th height="125" width="250">@item.name<br /><hr><br />Category: @item.category</th>
+
+    </tr>
+    <tr>
+        <th height="250">@item.description <br /><br /><br /><br /><br />@item.quantity @item.quantitytype </th>
+    </tr>
+    <tr>
+        <th>@item.nrofitems Items left.<hr>Price @item.price;- </th>
+
+    </tr>
+</table>
+
+<button type="button" class="btn btn-danger" @onclick=BackToList>Back</button>
+<button type="button" class="btn btn-info" @onclick=AddInCart>Add in cart</button>
+<input type="number" placeholder="itemcount" @bind-value="itemcount" />
+<span id="resultJson">
+</span>
+
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    Item item { get; set; }
+    private int itemcount = 1;
+
+    protected override void OnInitialized()
+    {
+
+        item = userdata.ItemById(Id);
+    }
+
+    void BackToList()
+    {
+        NavigationManager.NavigateTo("/products");
+    }
+
+    async Task AddInCart()
+    {
+        if (itemcount > 0)
+        {
+            userdata.setItem(item, itemcount);
+            await jsRuntime.InvokeVoidAsync("setElementTextById", "resultJson", "Added to the cart");
+        }
+        else
+            await jsRuntime.InvokeVoidAsync("setElementTextById", "resultJson", "At least 1 item must be added");
+    }
+
+}

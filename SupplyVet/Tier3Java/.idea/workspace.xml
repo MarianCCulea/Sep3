@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a4dae1e1-f750-42be-9807-145cdf0339d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Items/AddItem.razor.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Items/ItemList.razor.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Items/Itemedit.razor.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Orders/OrderList.razor.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Products/Cart.razor.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Products/CompleteOrder.razor.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Products/OrderComplete.razor.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Products/ProductPage.razor.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Products/Products.razor.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tier2Java/key.keystore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tier2Java/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Tier3Java/Model/Mediator/AdaptorModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Tier3Java/Model/Mediator/DatabaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/.vs/BlazorWebApp/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/.vs/BlazorWebApp/v16/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/.vs/BlazorWebApp/v16/Server/sqlite3/storage.ide-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/.vs/BlazorWebApp/v16/Server/sqlite3/storage.ide-wal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Data/WeatherForecast.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Data/WeatherForecastService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Model/Domain/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/Model/Domain/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Model/Domain/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/Model/Domain/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Model/Domain/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/Model/Domain/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Pages/Account/Login.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/Pages/Account/Login.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Pages/Account/LoginRequester.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/Pages/Account/LoginRequester.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Pages/Account/Manage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/Pages/Account/Manage.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Pages/Account/Register.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/Pages/Account/Register.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Pages/Counter.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Pages/EditItem.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Pages/FetchData.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/Pages/Index.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Pages/Items.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Pages/Products.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Pages/SecretPage.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Pages/_Host.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/Pages/_Host.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Shared/DataLayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Shared/LoginDisplay.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/Shared/LoginDisplay.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Shared/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/Shared/MainLayout.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/Shared/NavMenu.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/bin/Debug/netcoreapp3.0/BlazorWebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/bin/Debug/netcoreapp3.0/BlazorWebApp.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/bin/Debug/netcoreapp3.0/BlazorWebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/bin/Debug/netcoreapp3.0/BlazorWebApp.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/bin/Debug/netcoreapp3.0/BlazorWebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/bin/Debug/netcoreapp3.0/BlazorWebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/bin/Debug/netcoreapp3.0/BlazorWebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/bin/Debug/netcoreapp3.0/BlazorWebApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.RazorComponent.input.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.RazorComponent.input.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.RazorCoreGenerate.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.TagHelpers.output.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.TagHelpers.output.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/BlazorWebApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Account/Login.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Account/Login.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Account/Manage.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Account/Manage.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Account/Register.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Account/Register.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Counter.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/EditItem.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/FetchData.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Index.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Index.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Items.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/Products.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/SecretPage.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/_Host.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Pages/_Host.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Shared/LoginDisplay.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Shared/LoginDisplay.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Shared/MainLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Shared/MainLayout.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Shared/NavMenu.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/Razor/Shared/NavMenu.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/BlazorWebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/BlazorWebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/BlazorWebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/BlazorWebApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Pages/Account/Login.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Pages/Account/Login.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Pages/Account/Manage.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Pages/Account/Manage.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Pages/Account/Register.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Pages/Account/Register.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Pages/Counter.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Pages/EditItem.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Pages/FetchData.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Pages/Index.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Pages/Index.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Pages/Items.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Pages/Products.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Pages/SecretPage.razor.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Shared/LoginDisplay.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Shared/LoginDisplay.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Shared/MainLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Shared/MainLayout.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Shared/NavMenu.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Debug/netcoreapp3.0/RazorDeclaration/Shared/NavMenu.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/BlazorWebApp.RazorComponent.input.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/BlazorWebApp.RazorComponent.input.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/BlazorWebApp.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/BlazorWebApp.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/App.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/App.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Pages/Account/Login.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Pages/Account/Login.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Pages/Account/Manage.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Pages/Account/Manage.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Pages/Account/Register.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Pages/Account/Register.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Pages/Error.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Pages/Error.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Pages/Index.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Pages/Index.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Pages/SecretPage.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Pages/SecretPage.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Pages/TestSubmit.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Pages/TestSubmit.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Shared/LoginDisplay.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Shared/LoginDisplay.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Shared/MainLayout.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Shared/MainLayout.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Shared/NavMenu.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/Shared/NavMenu.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/_Imports.razor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/obj/Release/netcoreapp3.0/RazorDeclaration/_Imports.razor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BlazorWebApp/wwwroot/interop.js" beforeDir="false" afterPath="$PROJECT_DIR$/../BlazorWebApp/wwwroot/interop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/src/main/java/Main/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/src/main/java/Main/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Domain/ItemList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Domain/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Domain/OrderList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Domain/UserList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Mediator/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Mediator/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Mediator/ModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Mediator/ModelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Mediator/Package.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Mediator/Package.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Mediator/Receiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Mediator/SocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/src/main/java/Model/Mediator/SocketClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Main/GreetingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Domain/ItemList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Domain/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Domain/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Domain/OrderList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Domain/UserList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/ModelManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/ModelManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/ModelManager$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/ModelManager$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/ModelManager$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/ModelManager$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/ModelManager$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/ModelManager$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/ModelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/ModelManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/Package.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/Package.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/Receiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/SocketClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Tier2Java/target/classes/Model/Mediator/SocketClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tier3Java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tier3Java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tier3Java/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tier3Java/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tier3Java/Model/Domain/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tier3Java/Model/Domain/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tier3Java/Model/Domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tier3Java/Model/Domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tier3Java/Model/Mediator/Adaptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tier3Java/Model/Mediator/Adaptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tier3Java/Model/Mediator/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tier3Java/Model/Mediator/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tier3Java/Model/Mediator/Model.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tier3Java/Model/Mediator/Package.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tier3Java/Model/Mediator/Package.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tier3Java/Model/Server/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tier3Java/Model/Server/ClientHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tier3Java/Model/Server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tier3Java/Model/Server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Domain/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Mediator/Adaptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Mediator/Adaptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Mediator/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Mediator/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Mediator/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Mediator/AdaptorModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Mediator/Package.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Mediator/Package.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Server/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Server/Server.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1UhG7kY1zvvnvb1gxQpUkioYx4s" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Tier2Java" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Model.Mediator" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sprite\Desktop\Tier3Java\src" />
+      <recent name="C:\Users\Sprite\Desktop\Tier3Java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sprite\Desktop\SEP3\SemesterProject3\Tier3Java" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Tier3Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a4dae1e1-f750-42be-9807-145cdf0339d6" name="Default Changelist" comment="" />
+      <created>1575801247922</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575801247922</updated>
+      <workItem from="1575801249310" duration="2000" />
+      <workItem from="1575805371653" duration="13989000" />
+      <workItem from="1575838649308" duration="2437000" />
+      <workItem from="1575886376698" duration="4758000" />
+      <workItem from="1575896437009" duration="9811000" />
+      <workItem from="1575917795469" duration="1215000" />
+      <workItem from="1575971587561" duration="1199000" />
+      <workItem from="1575988424918" duration="5284000" />
+      <workItem from="1576052601447" duration="219000" />
+      <workItem from="1576052840064" duration="40000" />
+      <workItem from="1576163533804" duration="2753000" />
+      <workItem from="1576226101556" duration="4510000" />
+      <workItem from="1576314402280" duration="15107000" />
+      <workItem from="1576347736273" duration="1309000" />
+      <workItem from="1576400278483" duration="7967000" />
+      <workItem from="1576484167805" duration="9458000" />
+      <workItem from="1576527157761" duration="1013000" />
+      <workItem from="1576572612927" duration="6116000" />
+      <workItem from="1576596547711" duration="5812000" />
+      <workItem from="1576661075929" duration="8682000" />
+      <workItem from="1576798634030" duration="137000" />
+      <workItem from="1576802622505" duration="244000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

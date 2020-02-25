@@ -1,0 +1,102 @@
+﻿@page "/items"
+@using BlazorWebApp.Model.Domain
+@inject IDataLayer DataLayer
+@inject IJSRuntime jsRuntime
+@attribute [Authorize(Policy = "MustBeProvider")]
+
+<h1>ItemList</h1>
+
+<p>
+    <a href="/additem">Add new item</a>
+</p>
+<br /><span id="resultJson">
+</span>
+
+<form>
+    <p>
+        <select asp-for="Category" asp-items="Model.Genres">
+            <option value="">All</option>
+        </select>
+        Title: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Items in stock
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in items)
+        {
+            var id = item.id;
+            var nam = item.name;
+            <tr>
+                <td>
+                    @item.id
+                </td>
+                <td>
+                    @item.name
+                </td>
+                <td>
+                    @item.category
+                </td>
+                <td>
+                    @item.price
+                </td>
+                <td>
+                    @item.nrofitems
+                </td>
+                <td>
+                    <a href=@($"/items/{item.id}") alt="Edit">Edit</a> /
+                    <button class="btn-danger" @onclick="() => ConfirmDelete(id, nam)">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@code {
+
+    private IList<Item> items { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        items = await DataLayer.RequestAllItemsAsync();
+    }
+
+    protected async Task ConfirmDelete(int id, string name)
+    {
+        bool confirmed = await jsRuntime.InvokeAsync<bool>("confirm", "Are you sure u want to delete item " + name + " ?");
+        if (confirmed)
+        {
+
+            var response = await DataLayer.DeleteItem(id);
+            items = await DataLayer.RequestAllItemsAsync();
+            await jsRuntime.InvokeVoidAsync("setElementTextById", "resultJson", response);
+        }
+        else
+        {
+
+        }
+    }
+
+
+}

@@ -1,0 +1,65 @@
+﻿@inject IUserData userdata
+@inject NavigationManager manager
+
+<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">SupplyVet</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+        
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="products">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Products
+            </NavLink>
+        </li>
+        <AuthorizeView>
+            <Authorized>
+                <li class="nav-item px-3">
+                    <NavLink @onclick="()=>Confirm(context.User.Identity.Name)" class="nav-link">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Products
+                    </NavLink>
+                </li>
+            </Authorized>
+            <Authorized>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="items">
+                        <span class="oi oi-ban" aria-hidden="true"></span> Item List
+                    </NavLink>
+                </li>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="orders">
+                        <span class="oi oi-bar-chart" aria-hidden="true"></span> Orders
+                    </NavLink>
+                </li>
+            </Authorized>
+        </AuthorizeView>
+    </ul>
+</div>
+
+@code {
+    bool collapseNavMenu = true;
+
+    string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+
+    protected async Task Confirm(string id)
+    {
+        int userid = Int32.Parse(id);
+        await userdata.GetUserAsync(userid);
+        manager.NavigateTo("/products");
+
+    }
+    void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

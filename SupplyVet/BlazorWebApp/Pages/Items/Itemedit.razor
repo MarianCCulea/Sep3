@@ -1,0 +1,88 @@
+﻿@page "/items/{Id:int}"
+@using BlazorWebApp.Model.Domain
+@using BlazorWebApp.Shared
+@using Microsoft.AspNetCore.Components;
+@attribute [Authorize(Policy = "MustBeProvider")]
+@inject IDataLayer dataLayer
+@inject NavigationManager NavigationManager
+
+<h1>Editing trophy "@item.name"</h1>
+
+<EditForm Model="@item" OnValidSubmit="@ValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <InputText Class="form-control" id="name" @bind-Value="item.name" />
+        <ValidationMessage For="@(() => item.name)" />
+    </div>
+    <div class="form-group">
+        <label for="category">Category:</label>
+        <InputText Class="form-control" id="category" @bind-Value="item.category" />
+        <ValidationMessage For="@(() => item.category)" />
+    </div>
+    <div class="form-group">
+        <label for="description">Description:</label>
+        <InputTextArea Class="form-control" id="description" @bind-Value="item.description" />
+        <ValidationMessage For="@(() => item.description)" />
+    </div>
+    <div class="form-group">
+        <label for="price">Price:</label>
+        <InputNumber Class="form-control" id="price" @bind-Value="item.price" />
+        <ValidationMessage For="@(() => item.price)" />
+    </div>
+    <div class="form-group">
+        <label for="url">Picture Url:</label>
+        <InputText Class="form-control" id="url" @bind-Value="item.url" />
+        <ValidationMessage For="@(() => item.url)" />
+    </div>
+    <div class="form-group">
+        <label for="quantity">Item Quantity:</label>
+        <InputNumber Class="form-control" id="quantity" @bind-Value="item.quantity" />
+        <ValidationMessage For="@(() => item.quantity)" />
+    </div>
+    <div class="form-group">
+        <label for="quantitytype">Quantity Type:</label>
+        <InputText Class="form-control" id="quantitytype" @bind-Value="item.quantitytype" />
+        <ValidationMessage For="@(() => item.quantitytype)" />
+    </div>
+    <div class="form-group">
+        <label for="nrofitems">Items in stock:</label>
+        <InputNumber Class="form-control" id="nrofitems" @bind-Value="item.nrofitems" />
+        <ValidationMessage For="@(() => item.nrofitems)" />
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <button class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    Item item { get; set; }
+
+    protected override void OnInitialized()
+    {
+
+        item = dataLayer.ItemById(Id);
+    }
+
+    void BackToList()
+    {
+        NavigationManager.NavigateTo("/items");
+    }
+
+    void Cancel()
+    {
+        BackToList();
+    }
+
+    void ValidSubmit()
+    {
+        dataLayer.PutItemAsync(item);
+        BackToList();
+    }
+}

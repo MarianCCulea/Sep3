@@ -1,0 +1,85 @@
+﻿@page "/orders"
+@using BlazorWebApp.Model.Domain
+@inject IDataLayer dataLayer
+@inject IJSRuntime jsRuntime
+@attribute [Authorize(Policy = "MustBeProvider")]
+
+<h1>OrderList</h1>
+<span>Request result:</span><span id="result">
+</span>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Adress
+            </th>
+            <th>
+                Invoice Adress
+            </th>
+            <th>
+                Phone
+            </th>
+            <th>
+                Total Price
+            </th>
+            <th>Delivered Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in orders)
+        {
+            var id = order.id;
+            <tr>
+                <td>
+                    @order.id
+                </td>
+                <td>
+                    @order.adress
+                </td>
+                <td>
+                    @order.invoiceadress
+                </td>
+                <td>
+                    @order.phone
+                </td>
+                <td>
+                    @order.totalprice;-
+                </td>
+                <td>
+                    <EditForm Model="@order" OnValidSubmit="@(()=>ValidSubmit(order))">
+                        <label for="delivered">Delivered</label>
+                        <InputCheckbox id="delivered" @bind-Value="order.delivered" />
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </EditForm>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@code {
+    private IList<Order> orders
+    { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        orders = await dataLayer.RequestAllOrdersAsync();
+    }
+
+    async Task ValidSubmit(Order order)
+    {
+        var response = await dataLayer.PutOrderAsync(order);
+        orders = await dataLayer.RequestAllOrdersAsync();
+        await jsRuntime.InvokeVoidAsync("setElementTextById", "result", response);
+
+
+    }
+
+
+
+
+}

@@ -1,0 +1,62 @@
+﻿@page "/edituser"
+@using BlazorWebApp.Model.Domain
+@using BlazorWebApp.Shared
+@using Microsoft.AspNetCore.Components;
+@inject IUserData userdata
+@inject IJSRuntime jsRuntime
+@inject NavigationManager NavigationManager
+@attribute [Authorize(Policy = "MustBeUser")]
+
+<h1>Edit Profile</h1>
+
+<EditForm Model="@user" OnValidSubmit="@ValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <InputText Class="form-control" id="username" @bind-Value="user.username" />
+        <ValidationMessage For="@(() => user.username)" />
+    </div>
+    <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <InputText Class="form-control" id="fullname" @bind-Value="user.fullname" />
+        <ValidationMessage For="@(() => user.fullname)" />
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <InputNumber Class="form-control" id="password" @bind-Value="user.password" />
+        <ValidationMessage For="@(() =>user.password)" />
+    </div>
+    <button type="submit" class="btn btn-primary">Update user</button>
+    <button class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+    <span id="resultJson">
+    </span>
+</EditForm>
+
+
+@code {
+
+    User user { get; set; } = new User();
+    protected override void OnInitialized()
+    {
+        user = userdata.GetUser();
+    }
+
+    private async Task ValidSubmit()
+    {
+        var response = await userdata.PutUserAsync(user);
+        await jsRuntime.InvokeVoidAsync("setElementTextById", "resultJson", response);
+    }
+
+    void BackToManage()
+    {
+        NavigationManager.NavigateTo("/manage");
+    }
+
+    void Cancel()
+    {
+        BackToManage();
+    }
+
+}

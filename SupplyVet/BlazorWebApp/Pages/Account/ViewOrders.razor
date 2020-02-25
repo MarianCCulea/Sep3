@@ -1,0 +1,73 @@
+﻿@page "/vieworders"
+
+@using BlazorWebApp.Model.Domain
+@inject IUserData userdata
+@inject IJSRuntime jsRuntime
+@inject NavigationManager manager
+@attribute [Authorize(Policy = "MustBeUser")]
+
+<h1>OrderList</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Adress
+            </th>
+            <th>
+                Invoice Adress
+            </th>
+            <th>
+                Phone
+            </th>
+            <th>
+                Total Price
+            </th>
+            <th>Delivered Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in orders)
+        {
+            var id = order.id;
+            <tr>
+                <td>
+                    @order.id
+                </td>
+                <td>
+                    @order.adress
+                </td>
+                <td>
+                    @order.invoiceadress
+                </td>
+                <td>
+                    @order.phone
+                </td>
+                <td>
+                    @order.totalprice;-
+                </td>
+                <td>
+                    @order.delivered
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@code {
+    private IList<Order> orders
+    { get; set; }
+    protected override void OnInitialized()
+    {
+        orders = userdata.GetUser().orders;
+    }
+
+    void Back()
+    {
+        manager.NavigateTo("/manage");
+    }
+
+}
